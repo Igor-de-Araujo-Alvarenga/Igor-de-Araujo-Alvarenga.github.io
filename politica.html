@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Política de Privacidade | Igor de Araujo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-body text-body">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Igor de Araujo</a>
+            <button class="btn btn-outline-light" id="toggle-theme">🌗</button>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <h1 class="mb-4">Política de Privacidade</h1>
+        <p>Esta Política de Privacidade descreve como as informações pessoais são coletadas, usadas e protegidas neste
+            site.</p>
+
+        <h2>1. Coleta de Dados</h2>
+        <p>Este site pode coletar informações fornecidas voluntariamente através de formulários de contato, como nome e
+            e-mail.</p>
+
+        <h2>2. Uso das Informações</h2>
+        <p>As informações coletadas são usadas exclusivamente para comunicação com os visitantes e melhoria contínua dos
+            serviços.</p>
+
+        <h2>3. Compartilhamento de Dados</h2>
+        <p>Os dados não são vendidos, compartilhados ou transferidos para terceiros, exceto quando exigido por lei.</p>
+
+        <h2>4. Segurança</h2>
+        <p>Medidas adequadas são tomadas para proteger as informações pessoais contra acessos não autorizados.</p>
+
+        <h2>5. Cookies</h2>
+        <p>Este site pode usar cookies ou tecnologias similares para melhorar a experiência do usuário e análise de
+            tráfego (ex: Google Analytics).</p>
+
+        <h2>6. Alterações</h2>
+        <p>Esta política pode ser atualizada periodicamente. Recomendamos a leitura frequente desta página.</p>
+
+        <h2>7. Contato</h2>
+        <p>Para dúvidas sobre esta política, entre em contato pelo e-mail: <a
+                href="mailto:igoralvatenga361@gmail.com">igoralvatenga361@gmail.com</a></p>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2025 Igor de Araujo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Alternador de tema claro/escuro
+        const toggleButton = document.getElementById('toggle-theme');
+        const htmlTag = document.documentElement;
+
+        toggleButton.addEventListener('click', () => {
+            const newTheme = htmlTag.getAttribute('data-bs-theme') === 'light' ? 'dark' : 'light';
+            htmlTag.setAttribute('data-bs-theme', newTheme);
+        });
+    </script>
+</body>
+
+</html>
