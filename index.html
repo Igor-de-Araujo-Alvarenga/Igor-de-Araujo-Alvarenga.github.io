@@ -97,36 +97,42 @@
     </section>
 
     <section id="contact" class="py-5 bg-body text-body">
-        <div class="container text-center">
-            <h2>Contato</h2>
-            <form action="https://formspree.io/f/xqalklgy" method="POST" class="mt-4">
-                <input type="text" name="nome" class="form-control mb-2" placeholder="Seu nome" required>
-                <input type="email" name="email" class="form-control mb-2" placeholder="Seu email" required>
-                <textarea name="mensagem" class="form-control mb-2" placeholder="Escreva sua mensagem" rows="4"
-                    required></textarea>
-                <button type="submit" class="btn btn-outline-light">Enviar</button>
-            </form>
-            <p class="lead mt-3">Entre em contato diretamente pelo WhatsApp:</p>
-            <div class="d-flex justify-content-around flex-wrap">
-                <div class="m-2">
-                    <a href="https://wa.me/5512991760977" target="_blank" class="btn btn-success btn-lg">
-                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                    </a>
+        <div class="container">
+            <h2 class="text-center">Contato</h2>
+            <div class="row mt-4 g-4 align-items-start">
+                <!-- Formulário -->
+                <div class="col-md-6">
+                    <form action="https://formspree.io/f/xqalklgy" method="POST">
+                        <input type="text" name="nome" class="form-control mb-3" placeholder="Seu nome" required>
+                        <input type="email" name="email" class="form-control mb-3" placeholder="Seu email" required>
+                        <textarea name="mensagem" class="form-control mb-3" placeholder="Escreva sua mensagem" rows="5"
+                            required></textarea>
+                        <button type="submit" id="submit-button"
+                            class="btn btn-outline-dark btn-lg w-100">Enviar</button>
+                    </form>
                 </div>
-                <div class="m-2">
-                    <a href="mailto:igoralvatenga361@gmail.com" class="btn btn-danger btn-lg me-2">
-                        <i class="fas fa-envelope"></i> Gmail
-                    </a>
-                </div>
-                <div class="m-2">
-                    <a href="https://www.linkedin.com/in/igor-de-araujo-alvarenga-73ab831b1/" target="_blank"
-                        class="btn btn-primary btn-lg">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
+
+                <!-- Botões de contato -->
+                <div class="col-md-6 text-center">
+                    <p class="lead">Entre em contato diretamente pelas plataformas abaixo:</p>
+                    <div class="d-grid gap-3 d-md-flex justify-content-md-center">
+                        <a href="https://wa.me/5512991760977" target="_blank"
+                            class="btn btn-success btn-lg w-100 w-md-auto">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="mailto:igoralvatenga361@gmail.com" class="btn btn-danger btn-lg w-100 w-md-auto">
+                            <i class="fas fa-envelope"></i> Gmail
+                        </a>
+                        <a href="https://www.linkedin.com/in/igor-de-araujo-alvarenga-73ab831b1/" target="_blank"
+                            class="btn btn-primary btn-lg w-100 w-md-auto">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <section id="skills" class="py-5 bg-body text-body">
         <div class="container text-center">
@@ -221,8 +227,12 @@
 
         toggleButton.addEventListener('click', () => {
             const currentTheme = htmlTag.getAttribute('data-bs-theme');
+
+            const btn_send = document.getElementById('submit-button');
+            btn_send.setAttribute('class', currentTheme === 'light' ? 'btn btn-lg btn-outline-light' : 'btn btn-lg btn-outline-dark');
             htmlTag.setAttribute('data-bs-theme', currentTheme === 'light' ? 'dark' : 'light');
         });
+
     </script>
 </body>
 
